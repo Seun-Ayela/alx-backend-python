@@ -10,8 +10,8 @@ from typing import Union, Tuple
 
 
 def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
-    return k, float(v) ** 2
     """
     Trying this docstring for this module
     """
+    return k, float(v) ** 2
     print(__import__("7-to_kv").to_kv.__doc__)
