@@ -1,23 +1,14 @@
 #!/usr/bin/env python3
-"""
-python3 -c
-'print(__import__("9-element_length").__doc__)'
-Annotate the below function’s parameters and return values with the appropriate types
 
 
-Author: Oluwaseun Ayela 
-"""
+'''Annotating the below function’s parameters and return
+values with the appropriate types
+'''
 
-from typing import List, Tuple
 
-def element_length(lst: List[str]) -> List[Tuple[str, int]]:
-    """
-    Trying this docstring for this module
-     python3 -c
-     'print(__import__("9-element_length").element_length.__doc__)'
+from typing import Sequence, Iterable, List, Tuple
 
-    """
+
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
+    '''Annotating the function parameters'''
     return [(i, len(i)) for i in lst]
-    python3 - c
-    print(__import__("9-element_length").element_length.__doc__)'
-

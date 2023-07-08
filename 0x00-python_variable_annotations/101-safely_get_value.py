@@ -1,28 +1,21 @@
 #!/usr/bin/env python3
-"""
-python3 -c
-'print(__import__("101-safely_get_value).__doc__)'
-Given the parameters and the return values, add type annotations to the function
+'''Given the parameters and the return values, add type
+annotations to the function
 
-Author: Oluwaseun Ayela 
-"""
-
-from typing import Dict, TypeVar, Optional
-
-K = TypeVar('K')
-V = TypeVar('V')
+Hint: look into TypeVar.
+'''
+from typing import Any, Mapping, Union, TypeVar
 
 
-def safely_get_value(dct: Dict[K, V], key: K, default: Optional[V] = None) -> Optional[V]:
-    """
-    Trying this docstring for this module
-     python3 -c
-     'print(__import__("101-safely_get_value").safely_get_value.__doc__)'
+T = TypeVar('T')
+Res = Union[Any, T]
+Def = Union[T, None]
 
-    """
+
+def safely_get_value(dct: Mapping, key: Any, default: Def = None) -> Res:
+    '''a function that gets the value from a
+    dictionary using the key'''
     if key in dct:
         return dct[key]
     else:
-        return default
-    python3 - c
-    print(__import__("101-safely_get_value").safely_get_value.__doc__)
+        return
